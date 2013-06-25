@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C47AD6D81779F6A100F3EF7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6D71779F6A100F3EF7D /* UIKit.framework */; };
+		C47AD6DA1779F6A100F3EF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6D91779F6A100F3EF7D /* Foundation.framework */; };
+		C47AD6DC1779F6A100F3EF7D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6DB1779F6A100F3EF7D /* CoreGraphics.framework */; };
+		C47AD6E21779F6A100F3EF7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47AD6E01779F6A100F3EF7D /* InfoPlist.strings */; };
+		C47AD6E41779F6A100F3EF7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD6E31779F6A100F3EF7D /* main.m */; };
+		C47AD6E81779F6A100F3EF7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD6E71779F6A100F3EF7D /* AppDelegate.m */; };
+		C47AD6EA1779F6A100F3EF7D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C47AD6E91779F6A100F3EF7D /* Default.png */; };
+		C47AD6EC1779F6A100F3EF7D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C47AD6EB1779F6A100F3EF7D /* Default@2x.png */; };
+		C47AD6EE1779F6A100F3EF7D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C47AD6ED1779F6A100F3EF7D /* Default-568h@2x.png */; };
+		C47AD6F11779F6A100F3EF7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD6F01779F6A100F3EF7D /* ViewController.m */; };
+		C47AD6F41779F6A100F3EF7D /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47AD6F21779F6A100F3EF7D /* ViewController.xib */; };
+		C47AD6FC1779F6A100F3EF7D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6FB1779F6A100F3EF7D /* SenTestingKit.framework */; };
+		C47AD6FD1779F6A100F3EF7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6D71779F6A100F3EF7D /* UIKit.framework */; };
+		C47AD6FE1779F6A100F3EF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6D91779F6A100F3EF7D /* Foundation.framework */; };
+		C47AD7061779F6A100F3EF7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47AD7041779F6A100F3EF7D /* InfoPlist.strings */; };
+		C47AD7091779F6A100F3EF7D /* ContactBubblesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD7081779F6A100F3EF7D /* ContactBubblesTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C47AD6FF1779F6A100F3EF7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C47AD6CC1779F6A100F3EF7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C47AD6D31779F6A100F3EF7D;
+			remoteInfo = ContactBubbles;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C47AD6D41779F6A100F3EF7D /* ContactBubbles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactBubbles.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47AD6D71779F6A100F3EF7D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C47AD6D91779F6A100F3EF7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C47AD6DB1779F6A100F3EF7D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C47AD6DF1779F6A100F3EF7D /* ContactBubbles-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContactBubbles-Info.plist"; sourceTree = "<group>"; };
+		C47AD6E11779F6A100F3EF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C47AD6E31779F6A100F3EF7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C47AD6E51779F6A100F3EF7D /* ContactBubbles-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactBubbles-Prefix.pch"; sourceTree = "<group>"; };
+		C47AD6E61779F6A100F3EF7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C47AD6E71779F6A100F3EF7D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C47AD6E91779F6A100F3EF7D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C47AD6EB1779F6A100F3EF7D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C47AD6ED1779F6A100F3EF7D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C47AD6EF1779F6A100F3EF7D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C47AD6F01779F6A100F3EF7D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C47AD6F31779F6A100F3EF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		C47AD6FA1779F6A100F3EF7D /* ContactBubblesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactBubblesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47AD6FB1779F6A100F3EF7D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C47AD7031779F6A100F3EF7D /* ContactBubblesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContactBubblesTests-Info.plist"; sourceTree = "<group>"; };
+		C47AD7051779F6A100F3EF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C47AD7071779F6A100F3EF7D /* ContactBubblesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactBubblesTests.h; sourceTree = "<group>"; };
+		C47AD7081779F6A100F3EF7D /* ContactBubblesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactBubblesTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C47AD6D11779F6A100F3EF7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD6D81779F6A100F3EF7D /* UIKit.framework in Frameworks */,
+				C47AD6DA1779F6A100F3EF7D /* Foundation.framework in Frameworks */,
+				C47AD6DC1779F6A100F3EF7D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47AD6F61779F6A100F3EF7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD6FC1779F6A100F3EF7D /* SenTestingKit.framework in Frameworks */,
+				C47AD6FD1779F6A100F3EF7D /* UIKit.framework in Frameworks */,
+				C47AD6FE1779F6A100F3EF7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C47AD6CB1779F6A100F3EF7D = {
+			isa = PBXGroup;
+			children = (
+				C47AD6DD1779F6A100F3EF7D /* ContactBubbles */,
+				C47AD7011779F6A100F3EF7D /* ContactBubblesTests */,
+				C47AD6D61779F6A100F3EF7D /* Frameworks */,
+				C47AD6D51779F6A100F3EF7D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C47AD6D51779F6A100F3EF7D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD6D41779F6A100F3EF7D /* ContactBubbles.app */,
+				C47AD6FA1779F6A100F3EF7D /* ContactBubblesTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C47AD6D61779F6A100F3EF7D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD6D71779F6A100F3EF7D /* UIKit.framework */,
+				C47AD6D91779F6A100F3EF7D /* Foundation.framework */,
+				C47AD6DB1779F6A100F3EF7D /* CoreGraphics.framework */,
+				C47AD6FB1779F6A100F3EF7D /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C47AD6DD1779F6A100F3EF7D /* ContactBubbles */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD6E61779F6A100F3EF7D /* AppDelegate.h */,
+				C47AD6E71779F6A100F3EF7D /* AppDelegate.m */,
+				C47AD6EF1779F6A100F3EF7D /* ViewController.h */,
+				C47AD6F01779F6A100F3EF7D /* ViewController.m */,
+				C47AD6F21779F6A100F3EF7D /* ViewController.xib */,
+				C47AD6DE1779F6A100F3EF7D /* Supporting Files */,
+			);
+			path = ContactBubbles;
+			sourceTree = "<group>";
+		};
+		C47AD6DE1779F6A100F3EF7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD6DF1779F6A100F3EF7D /* ContactBubbles-Info.plist */,
+				C47AD6E01779F6A100F3EF7D /* InfoPlist.strings */,
+				C47AD6E31779F6A100F3EF7D /* main.m */,
+				C47AD6E51779F6A100F3EF7D /* ContactBubbles-Prefix.pch */,
+				C47AD6E91779F6A100F3EF7D /* Default.png */,
+				C47AD6EB1779F6A100F3EF7D /* Default@2x.png */,
+				C47AD6ED1779F6A100F3EF7D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C47AD7011779F6A100F3EF7D /* ContactBubblesTests */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD7071779F6A100F3EF7D /* ContactBubblesTests.h */,
+				C47AD7081779F6A100F3EF7D /* ContactBubblesTests.m */,
+				C47AD7021779F6A100F3EF7D /* Supporting Files */,
+			);
+			path = ContactBubblesTests;
+			sourceTree = "<group>";
+		};
+		C47AD7021779F6A100F3EF7D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C47AD7031779F6A100F3EF7D /* ContactBubblesTests-Info.plist */,
+				C47AD7041779F6A100F3EF7D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C47AD6D31779F6A100F3EF7D /* ContactBubbles */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47AD70C1779F6A100F3EF7D /* Build configuration list for PBXNativeTarget "ContactBubbles" */;
+			buildPhases = (
+				C47AD6D01779F6A100F3EF7D /* Sources */,
+				C47AD6D11779F6A100F3EF7D /* Frameworks */,
+				C47AD6D21779F6A100F3EF7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactBubbles;
+			productName = ContactBubbles;
+			productReference = C47AD6D41779F6A100F3EF7D /* ContactBubbles.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C47AD6F91779F6A100F3EF7D /* ContactBubblesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C47AD70F1779F6A100F3EF7D /* Build configuration list for PBXNativeTarget "ContactBubblesTests" */;
+			buildPhases = (
+				C47AD6F51779F6A100F3EF7D /* Sources */,
+				C47AD6F61779F6A100F3EF7D /* Frameworks */,
+				C47AD6F71779F6A100F3EF7D /* Resources */,
+				C47AD6F81779F6A100F3EF7D /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C47AD7001779F6A100F3EF7D /* PBXTargetDependency */,
+			);
+			name = ContactBubblesTests;
+			productName = ContactBubblesTests;
+			productReference = C47AD6FA1779F6A100F3EF7D /* ContactBubblesTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C47AD6CC1779F6A100F3EF7D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Cannon, Dustin";
+			};
+			buildConfigurationList = C47AD6CF1779F6A100F3EF7D /* Build configuration list for PBXProject "ContactBubbles" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C47AD6CB1779F6A100F3EF7D;
+			productRefGroup = C47AD6D51779F6A100F3EF7D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C47AD6D31779F6A100F3EF7D /* ContactBubbles */,
+				C47AD6F91779F6A100F3EF7D /* ContactBubblesTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C47AD6D21779F6A100F3EF7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD6E21779F6A100F3EF7D /* InfoPlist.strings in Resources */,
+				C47AD6EA1779F6A100F3EF7D /* Default.png in Resources */,
+				C47AD6EC1779F6A100F3EF7D /* Default@2x.png in Resources */,
+				C47AD6EE1779F6A100F3EF7D /* Default-568h@2x.png in Resources */,
+				C47AD6F41779F6A100F3EF7D /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47AD6F71779F6A100F3EF7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD7061779F6A100F3EF7D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C47AD6F81779F6A100F3EF7D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C47AD6D01779F6A100F3EF7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD6E41779F6A100F3EF7D /* main.m in Sources */,
+				C47AD6E81779F6A100F3EF7D /* AppDelegate.m in Sources */,
+				C47AD6F11779F6A100F3EF7D /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C47AD6F51779F6A100F3EF7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47AD7091779F6A100F3EF7D /* ContactBubblesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C47AD7001779F6A100F3EF7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C47AD6D31779F6A100F3EF7D /* ContactBubbles */;
+			targetProxy = C47AD6FF1779F6A100F3EF7D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C47AD6E01779F6A100F3EF7D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C47AD6E11779F6A100F3EF7D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C47AD6F21779F6A100F3EF7D /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C47AD6F31779F6A100F3EF7D /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		C47AD7041779F6A100F3EF7D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C47AD7051779F6A100F3EF7D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C47AD70A1779F6A100F3EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C47AD70B1779F6A100F3EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C47AD70D1779F6A100F3EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactBubbles/ContactBubbles-Prefix.pch";
+				INFOPLIST_FILE = "ContactBubbles/ContactBubbles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C47AD70E1779F6A100F3EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactBubbles/ContactBubbles-Prefix.pch";
+				INFOPLIST_FILE = "ContactBubbles/ContactBubbles-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C47AD7101779F6A100F3EF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContactBubbles.app/ContactBubbles";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactBubbles/ContactBubbles-Prefix.pch";
+				INFOPLIST_FILE = "ContactBubblesTests/ContactBubblesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C47AD7111779F6A100F3EF7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ContactBubbles.app/ContactBubbles";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ContactBubbles/ContactBubbles-Prefix.pch";
+				INFOPLIST_FILE = "ContactBubblesTests/ContactBubblesTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C47AD6CF1779F6A100F3EF7D /* Build configuration list for PBXProject "ContactBubbles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47AD70A1779F6A100F3EF7D /* Debug */,
+				C47AD70B1779F6A100F3EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C47AD70C1779F6A100F3EF7D /* Build configuration list for PBXNativeTarget "ContactBubbles" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47AD70D1779F6A100F3EF7D /* Debug */,
+				C47AD70E1779F6A100F3EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C47AD70F1779F6A100F3EF7D /* Build configuration list for PBXNativeTarget "ContactBubblesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C47AD7101779F6A100F3EF7D /* Debug */,
+				C47AD7111779F6A100F3EF7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C47AD6CC1779F6A100F3EF7D /* Project object */;
+}
