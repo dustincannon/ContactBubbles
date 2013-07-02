@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyTextField.h
 //  ContactBubbles
 //
 //  Created by Cannon, Dustin on 6/25/13.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ContactPicker.h"
 
-@interface ViewController : UIViewController <ContactPickerDelegate>
+@interface MyTextField : UITextField
 
 @end

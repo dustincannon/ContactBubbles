@@ -23,6 +23,14 @@
 		C47AD6FE1779F6A100F3EF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47AD6D91779F6A100F3EF7D /* Foundation.framework */; };
 		C47AD7061779F6A100F3EF7D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47AD7041779F6A100F3EF7D /* InfoPlist.strings */; };
 		C47AD7091779F6A100F3EF7D /* ContactBubblesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD7081779F6A100F3EF7D /* ContactBubblesTests.m */; };
+		C47AD7141779F70F00F3EF7D /* ContactPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD7131779F70F00F3EF7D /* ContactPicker.m */; };
+		C47AD717177A124500F3EF7D /* MyTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C47AD716177A124500F3EF7D /* MyTextField.m */; };
+		C4BE247C1781EE900025052A /* THContactBubble.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE24791781EE900025052A /* THContactBubble.m */; };
+		C4BE247D1781EE900025052A /* THBubbleColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE247B1781EE900025052A /* THBubbleColor.m */; };
+		C4BE24801781F1A30025052A /* AddressBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BE247F1781F1A20025052A /* AddressBookManager.m */; };
+		C4BE24831781F42B0025052A /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BE24811781F42B0025052A /* AddressBook.framework */; };
+		C4BE24841781F42B0025052A /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BE24821781F42B0025052A /* AddressBookUI.framework */; };
+		C4BE24861781F4490025052A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BE24851781F4480025052A /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +66,19 @@
 		C47AD7051779F6A100F3EF7D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C47AD7071779F6A100F3EF7D /* ContactBubblesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactBubblesTests.h; sourceTree = "<group>"; };
 		C47AD7081779F6A100F3EF7D /* ContactBubblesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContactBubblesTests.m; sourceTree = "<group>"; };
+		C47AD7121779F70F00F3EF7D /* ContactPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactPicker.h; sourceTree = "<group>"; };
+		C47AD7131779F70F00F3EF7D /* ContactPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactPicker.m; sourceTree = "<group>"; };
+		C47AD715177A124500F3EF7D /* MyTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTextField.h; sourceTree = "<group>"; };
+		C47AD716177A124500F3EF7D /* MyTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTextField.m; sourceTree = "<group>"; };
+		C4BE24781781EE900025052A /* THContactBubble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THContactBubble.h; sourceTree = "<group>"; };
+		C4BE24791781EE900025052A /* THContactBubble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THContactBubble.m; sourceTree = "<group>"; };
+		C4BE247A1781EE900025052A /* THBubbleColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THBubbleColor.h; sourceTree = "<group>"; };
+		C4BE247B1781EE900025052A /* THBubbleColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THBubbleColor.m; sourceTree = "<group>"; };
+		C4BE247E1781F1A20025052A /* AddressBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressBookManager.h; sourceTree = "<group>"; };
+		C4BE247F1781F1A20025052A /* AddressBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressBookManager.m; sourceTree = "<group>"; };
+		C4BE24811781F42B0025052A /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		C4BE24821781F42B0025052A /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		C4BE24851781F4480025052A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4BE24861781F4490025052A /* QuartzCore.framework in Frameworks */,
+				C4BE24831781F42B0025052A /* AddressBook.framework in Frameworks */,
+				C4BE24841781F42B0025052A /* AddressBookUI.framework in Frameworks */,
 				C47AD6D81779F6A100F3EF7D /* UIKit.framework in Frameworks */,
 				C47AD6DA1779F6A100F3EF7D /* Foundation.framework in Frameworks */,
 				C47AD6DC1779F6A100F3EF7D /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +130,9 @@
 		C47AD6D61779F6A100F3EF7D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C4BE24851781F4480025052A /* QuartzCore.framework */,
+				C4BE24811781F42B0025052A /* AddressBook.framework */,
+				C4BE24821781F42B0025052A /* AddressBookUI.framework */,
 				C47AD6D71779F6A100F3EF7D /* UIKit.framework */,
 				C47AD6D91779F6A100F3EF7D /* Foundation.framework */,
 				C47AD6DB1779F6A100F3EF7D /* CoreGraphics.framework */,
@@ -123,6 +150,16 @@
 				C47AD6F01779F6A100F3EF7D /* ViewController.m */,
 				C47AD6F21779F6A100F3EF7D /* ViewController.xib */,
 				C47AD6DE1779F6A100F3EF7D /* Supporting Files */,
+				C47AD7121779F70F00F3EF7D /* ContactPicker.h */,
+				C47AD7131779F70F00F3EF7D /* ContactPicker.m */,
+				C47AD715177A124500F3EF7D /* MyTextField.h */,
+				C47AD716177A124500F3EF7D /* MyTextField.m */,
+				C4BE24781781EE900025052A /* THContactBubble.h */,
+				C4BE24791781EE900025052A /* THContactBubble.m */,
+				C4BE247A1781EE900025052A /* THBubbleColor.h */,
+				C4BE247B1781EE900025052A /* THBubbleColor.m */,
+				C4BE247E1781F1A20025052A /* AddressBookManager.h */,
+				C4BE247F1781F1A20025052A /* AddressBookManager.m */,
 			);
 			path = ContactBubbles;
 			sourceTree = "<group>";
@@ -273,6 +310,11 @@
 				C47AD6E41779F6A100F3EF7D /* main.m in Sources */,
 				C47AD6E81779F6A100F3EF7D /* AppDelegate.m in Sources */,
 				C47AD6F11779F6A100F3EF7D /* ViewController.m in Sources */,
+				C47AD7141779F70F00F3EF7D /* ContactPicker.m in Sources */,
+				C47AD717177A124500F3EF7D /* MyTextField.m in Sources */,
+				C4BE247C1781EE900025052A /* THContactBubble.m in Sources */,
+				C4BE247D1781EE900025052A /* THBubbleColor.m in Sources */,
+				C4BE24801781F1A30025052A /* AddressBookManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +495,7 @@
 				C47AD70E1779F6A100F3EF7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C47AD70F1779F6A100F3EF7D /* Build configuration list for PBXNativeTarget "ContactBubblesTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +504,7 @@
 				C47AD7111779F6A100F3EF7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
