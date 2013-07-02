@@ -33,7 +33,6 @@
         
         // Set up text field
         _textField = [[MyTextField alloc] init];
-        _textField.placeholder = @"Placeholder";
         _textField.borderStyle = UITextBorderStyleRoundedRect;
         _textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
         _textField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -50,10 +49,11 @@
 - (void)layoutViews
 {
     CGRect frameOfLastBubble = {{0, 0}, {0, 0}};
-    CGPoint centerOfLastBubble = {0, 0};
 
     CGFloat x, y, width, height;
     x = y = width = height = 0;
+
+    int lineCount = 0;
 
     // Loop through the contacts adding contact bubbles if necessary
     for (NSString *contact in _contactKeys) {
@@ -64,9 +64,24 @@
         if (frameOfLastBubble.size.width == 0) {
             // First bubble
             bubbleFrame.origin.x = kHorizontalPadding;
-            bubbleFrame.origin.y = kVerticalPadding + kViewPadding;
+            bubbleFrame.origin.y = (_lineHeight - bubbleFrame.size.height) / 2;
         } else {
-            
+            // Check if bubble will fit on the current line
+            CGFloat usableWidth = self.frame.size.width -
+                                  frameOfLastBubble.origin.x -
+                                  frameOfLastBubble.size.width -
+                                  _addContactsButton.frame.size.width;
+
+            if (usableWidth - bubbleFrame.size.width >= 0) {
+                bubbleFrame.origin.x = frameOfLastBubble.origin.x + frameOfLastBubble.size.width + kHorizontalPadding;
+                bubbleFrame.origin.y = frameOfLastBubble.origin.y;
+            } else {
+                // Next line
+                NSLog(@"bubble won't fit on current line");
+                lineCount++;
+                bubbleFrame.origin.x = kHorizontalPadding;
+                bubbleFrame.origin.y = (lineCount * _lineHeight) + ((_lineHeight - bubbleFrame.size.height) / 2);
+            }
         }
 
         frameOfLastBubble = bubbleFrame;
@@ -76,7 +91,6 @@
         if (contactBubble.superview == nil) {
             [self addSubview:contactBubble];
         }
-        centerOfLastBubble = contactBubble.center;
     }
 
     // Put a text field after the last contact bubble, if it exists
@@ -92,18 +106,21 @@
                           frameOfLastBubble.origin.x -
                           frameOfLastBubble.size.width -
                           _addContactsButton.frame.size.width;
-    //if (usableWidth - minWidth >= 0) {
+    if (usableWidth - minWidth >= 0) {
         // add to the same line
         textFieldFrame.origin.x = frameOfLastBubble.origin.x + frameOfLastBubble.size.width + kHorizontalPadding;
+        textFieldFrame.origin.y = lineCount * _lineHeight + ((_lineHeight - textFieldFrame.size.height) / 2);
         textFieldFrame.size.width = self.frame.size.width - textFieldFrame.origin.x - _addContactsButton.frame.size.width;
-    //} else {
+    } else {
         // put text field on next line
-    //}
+        lineCount++;
+        textFieldFrame.origin.x = kHorizontalPadding;
+        textFieldFrame.origin.y = lineCount * _lineHeight + ((_lineHeight - textFieldFrame.size.height) / 2);
+        textFieldFrame.size.width = self.frame.size.width - textFieldFrame.origin.x - _addContactsButton.frame.size.width;
+    }
 
     _textField.frame = textFieldFrame;
-    centerOfLastBubble = centerOfLastBubble.y ? centerOfLastBubble : CGPointMake(centerOfLastBubble.x,
-                                                                                 _lineHeight / 2 + kVerticalPadding + kViewPadding);
-    _textField.center = CGPointMake(_textField.center.x, centerOfLastBubble.y);
+    //_textField.center = CGPointMake(_textField.center.x, _lineHeight / 2);
 
     if (_textField.superview == nil) {
         [self addSubview:_textField];
@@ -120,8 +137,9 @@
     }
 
     // Adjust this view's frame
-    height = frameOfLastBubble.size.height ? frameOfLastBubble.size.height : _textField.frame.size.height;
-    height += 2 * kVerticalPadding + 2 * kViewPadding;
+    //height = frameOfLastBubble.size.height ? frameOfLastBubble.size.height : _textField.frame.size.height;
+    //height += 2 * kVerticalPadding + 2 * kViewPadding;
+    height = lineCount * _lineHeight + _lineHeight;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
 }
 
@@ -129,27 +147,30 @@
 
 - (BOOL)textField:(UITextField *)field shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    // Capture delete when textfield is empty
-    if ([field.text isEqualToString:@""] && [string isEqualToString:@""]) {
-        // Select last bubble
-        NSLog(@"delete pressed while field is empty");
-    } else {
-    
-        if ([self.delegate respondsToSelector:@selector(contactPickerTextFieldDidChange:)]) {
-            NSString *newText = field.text;
-
-            if ([string isEqualToString:@""]) {
-                // Delete key was pressed. Remove character from new text.
-                newText = [newText substringWithRange:NSMakeRange(0, newText.length - 1)];
-            } else {
-                newText = [newText stringByAppendingString:string];
-            }
-
-            [self.delegate contactPickerTextFieldDidChange:newText];
-        }
+    if ([string isEqualToString:@"\n"] && _textField.text.length) {
+        // Return was pressed while the text field contains text.
+        // Add a contact and clear the text field.
+        [self addContact:_textField.text];
+        _textField.text = @"";
     }
+
+    if ([self.delegate respondsToSelector:@selector(contactPickerTextFieldDidChange:)]) {
+        NSString *newText = field.text;
+
+        if ([string isEqualToString:@""]) {
+            // Delete key was tapped. Remove character from new text.
+            newText = [newText substringWithRange:NSMakeRange(0, newText.length - 1)];
+        } else {
+            newText = [newText stringByAppendingString:string];
+        }
+
+        [self.delegate contactPickerTextFieldDidChange:newText];
+    }
+
     return YES;
 }
+
+#pragma mark - Add Contact Methods
 
 - (void)addContactButtonTapped:(id)sender
 {

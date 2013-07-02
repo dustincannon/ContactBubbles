@@ -49,7 +49,7 @@
     [contactPicker layoutViews];
     [self.view addSubview:contactPicker];
 
-    //[contactPicker addContact:@"dustin.cannon@gmail.com"];
+    //[contactPicker addContact:@"areaaaaaaaaaaaaaaaaallllllllllllllllylongemailaddress@gmail.com"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +76,9 @@
         NSLog(@"lastName: %@", lastName);
         NSLog(@"emailAddress: %@", emailAddress);
 
-        [contactPicker addContact:emailAddress];
+        if (emailAddress) {
+            [contactPicker addContact:emailAddress];
+        }
     }];
 }
 
