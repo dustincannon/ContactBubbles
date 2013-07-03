@@ -148,6 +148,13 @@
 
 #pragma mark - MyTextField delegate methods
 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+{
+    NSLog(@"textFieldShouldBeginEditing");
+    [_selectedBubble unSelect];
+    return YES;
+}
+
 - (BOOL)textField:(UITextField *)field shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if ([string isEqualToString:@"\n"] && _textField.text.length) {
@@ -209,25 +216,33 @@
 
 - (void)contactBubbleWasSelected:(THContactBubble *)contactBubble
 {
+    if (_selectedBubble) {
+        [_selectedBubble unSelect];
+    }
+
+    _selectedBubble = contactBubble;
+
     [_textField resignFirstResponder];
-    _textField.hidden = YES;
 }
 
 - (void)contactBubbleWasUnSelected:(THContactBubble *)contactBubble
 {
+    if (_selectedBubble == contactBubble) {
+        _selectedBubble = nil;
+    }
     [_textField becomeFirstResponder];
-    _textField.hidden = NO;
-    _selectedBubble = nil;
 }
 
 - (void)contactBubbleShouldBeRemoved:(THContactBubble *)contactBubble
 {
-    NSLog(@"contactBubbleShouldBeRemoved: %@", [contactBubble name]);
     NSString *contact = [contactBubble name];
-    [_contacts removeObjectForKey:[contactBubble name]];
+
+    [_contacts removeObjectForKey:contact];
     [_contactKeys removeObject:contact];
+    
     [contactBubble removeFromSuperview];
     [self layoutViews];
+
     _textFieldShouldRespondToDelete = NO;
 }
 

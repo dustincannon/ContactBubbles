@@ -138,6 +138,10 @@
     self.isSelected = NO;
     
     [self.textView resignFirstResponder];
+
+    if ([self.delegate respondsToSelector:@selector(contactBubbleWasUnSelected:)]){
+        [self.delegate contactBubbleWasUnSelected:self];
+    }
 }
 
 - (void)handleTapGesture {
@@ -168,9 +172,6 @@
     if (self.isSelected){
         self.textView.text = @"";
         [self unSelect];
-        if ([self.delegate respondsToSelector:@selector(contactBubbleWasUnSelected:)]){
-            [self.delegate contactBubbleWasUnSelected:self];
-        }
     }
     
     return YES;
