@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "THContactBubble.h"
+#import "MyTextField.h"
 
 @class ContactPicker;
-@class MyTextField;
 
 @protocol ContactPickerDelegate <NSObject>
 
@@ -23,12 +23,15 @@
 
 @end
 
-@interface ContactPicker : UIView <UITextFieldDelegate, THContactBubbleDelegate>
+@interface ContactPicker : UIView <MyTextFieldDelegate, THContactBubbleDelegate>
 {
     MyTextField *_textField;
     UIButton *_addContactsButton;
     NSMutableDictionary *_contacts;
     NSMutableArray *_contactKeys;
+    THContactBubble *_selectedBubble;
+
+    BOOL _textFieldShouldRespondToDelete;
 
     CGFloat _lineHeight;
 }

@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol MyTextFieldDelegate <UITextFieldDelegate>
+
+@optional
+
+- (void)textFieldDeleteWasPressedWhileEmpty;
+
+@end
+
 @interface MyTextField : UITextField
+
+@property (nonatomic, weak) id <MyTextFieldDelegate> delegate;
 
 @end

@@ -24,6 +24,9 @@
     if (self) {
         _contacts = [NSMutableDictionary dictionary];
         _contactKeys = [NSMutableArray array];
+        _selectedBubble = nil;
+
+        _textFieldShouldRespondToDelete = YES;
 
         // Create a contact bubble to determine the height of a line
         THContactBubble *contactBubble = [[THContactBubble alloc] initWithName:@"Sample"];
@@ -143,7 +146,7 @@
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
 }
 
-#pragma mark - UITextField delegate methods
+#pragma mark - MyTextField delegate methods
 
 - (BOOL)textField:(UITextField *)field shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -168,6 +171,15 @@
     }
 
     return YES;
+}
+
+- (void)textFieldDeleteWasPressedWhileEmpty
+{
+    if (_textFieldShouldRespondToDelete) {
+        _selectedBubble = [_contacts objectForKey:[_contactKeys lastObject]];
+        [_selectedBubble select];
+    }
+    _textFieldShouldRespondToDelete = YES;
 }
 
 #pragma mark - Add Contact Methods
@@ -197,17 +209,26 @@
 
 - (void)contactBubbleWasSelected:(THContactBubble *)contactBubble
 {
-    
+    [_textField resignFirstResponder];
+    _textField.hidden = YES;
 }
 
 - (void)contactBubbleWasUnSelected:(THContactBubble *)contactBubble
 {
-    
+    [_textField becomeFirstResponder];
+    _textField.hidden = NO;
+    _selectedBubble = nil;
 }
 
 - (void)contactBubbleShouldBeRemoved:(THContactBubble *)contactBubble
 {
-    
+    NSLog(@"contactBubbleShouldBeRemoved: %@", [contactBubble name]);
+    NSString *contact = [contactBubble name];
+    [_contacts removeObjectForKey:[contactBubble name]];
+    [_contactKeys removeObject:contact];
+    [contactBubble removeFromSuperview];
+    [self layoutViews];
+    _textFieldShouldRespondToDelete = NO;
 }
 
 @end

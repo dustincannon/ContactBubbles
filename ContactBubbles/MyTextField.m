@@ -26,10 +26,10 @@
 
 - (void)deleteBackward
 {
-    NSLog(@"delete was tapped");
-    if ([self.text isEqualToString:@""]) {
-        NSLog(@"text field is empty");
-        
+    if (self.text.length == 0) {
+        if ([self.delegate respondsToSelector:@selector(textFieldDeleteWasPressedWhileEmpty)]) {
+            [self.delegate textFieldDeleteWasPressedWhileEmpty];
+        }
     }
     [super deleteBackward];
 }
