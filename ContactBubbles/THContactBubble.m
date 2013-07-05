@@ -78,6 +78,19 @@
     [self unSelect];
 }
 
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+
+    // If the label is wider than the new frame's width then we need to truncate the label
+    if ((self.label.frame.size.width + (2 * kHorizontalPadding)) > frame.size.width) {
+        self.label.frame = CGRectMake(self.label.frame.origin.x,
+                                      self.label.frame.origin.y,
+                                      frame.size.width - (2 * kHorizontalPadding),
+                                      self.label.frame.size.height);
+    }
+}
+
 - (void)adjustSize {
     // Adjust the label frames
     [self.label sizeToFit];

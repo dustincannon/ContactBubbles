@@ -41,4 +41,6 @@
 - (void)unSelect;
 - (void)setFont:(UIFont *)font;
 
+- (void)adjustSize;
+
 @end

@@ -63,6 +63,7 @@
     // Loop through the contacts adding contact bubbles if necessary
     for (NSString *contact in _contactKeys) {
         THContactBubble *contactBubble = (THContactBubble *)[_contacts objectForKey:contact];
+        [contactBubble adjustSize];
         CGRect bubbleFrame = contactBubble.frame;
 
         // Size and position the contact bubble
@@ -70,13 +71,19 @@
             // First bubble
             bubbleFrame.origin.x = kHorizontalPadding;
             bubbleFrame.origin.y = (_lineHeight - bubbleFrame.size.height) / 2;
+
+            // If the bubble still won't fit on the line then we have to truncate it
+            CGFloat usableWidth = self.frame.size.width - bubbleFrame.origin.x - bubbleFrame.size.width - kHorizontalPadding;
+            if (usableWidth < 0) {
+                bubbleFrame.size.width = self.frame.size.width - (2 * kHorizontalPadding);
+            }
         } else {
             // Check if bubble will fit on the current line
             CGFloat usableWidth = self.frame.size.width -
                                   frameOfLastBubble.origin.x -
                                   frameOfLastBubble.size.width -
                                   _addContactsButton.frame.size.width;
-
+            
             if (usableWidth - bubbleFrame.size.width >= 0) {
                 bubbleFrame.origin.x = frameOfLastBubble.origin.x + frameOfLastBubble.size.width + kHorizontalPadding;
                 bubbleFrame.origin.y = frameOfLastBubble.origin.y;
@@ -86,6 +93,12 @@
                 lineCount++;
                 bubbleFrame.origin.x = kHorizontalPadding;
                 bubbleFrame.origin.y = (lineCount * _lineHeight) + ((_lineHeight - bubbleFrame.size.height) / 2);
+
+                // If the bubble still won't fit on the line then we have to truncate it
+                CGFloat usableWidth = self.frame.size.width - bubbleFrame.origin.x - bubbleFrame.size.width - kHorizontalPadding;
+                if (usableWidth < 0) {
+                    bubbleFrame.size.width = self.frame.size.width - (2 * kHorizontalPadding);
+                }
             }
         }
 
@@ -125,7 +138,6 @@
     }
 
     _textField.frame = textFieldFrame;
-    //_textField.center = CGPointMake(_textField.center.x, _lineHeight / 2);
 
     if (_textField.superview == nil) {
         [self addSubview:_textField];
@@ -142,8 +154,6 @@
     }
 
     // Adjust this view's frame
-    //height = frameOfLastBubble.size.height ? frameOfLastBubble.size.height : _textField.frame.size.height;
-    //height += 2 * kVerticalPadding + 2 * kViewPadding;
     height = lineCount * _lineHeight + _lineHeight;
     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, height);
 }
