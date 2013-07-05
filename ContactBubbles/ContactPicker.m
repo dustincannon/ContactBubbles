@@ -44,6 +44,8 @@
         // Set up add contacts button
         _addContactsButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
         [_addContactsButton addTarget:self action:@selector(addContactButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+
+        [self setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     }
 
     return self;

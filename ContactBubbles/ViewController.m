@@ -27,9 +27,6 @@
         textField = [[UITextField alloc] init];
         textField.placeholder = @"Placeholder";
         textField.borderStyle = UITextBorderStyleRoundedRect;
-        
-        //contactPicker = [[ContactPicker alloc] init];
-        //contactPicker.delegate = self;
     }
     return self;
 }
@@ -48,8 +45,11 @@
     contactPicker.delegate = self;
     [contactPicker layoutViews];
     [self.view addSubview:contactPicker];
+}
 
-    //[contactPicker addContact:@"areaaaaaaaaaaaaaaaaallllllllllllllllylongemailaddress@gmail.com"];
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [contactPicker layoutViews];
 }
 
 - (void)didReceiveMemoryWarning
